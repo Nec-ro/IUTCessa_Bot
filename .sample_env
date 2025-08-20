@@ -1,0 +1,4 @@
+BOT_TOKEN=your-bot-token-here
+SALATIN=1,2
+PAYCHECK_GROUP_ID=-1
+GEMMA_API_KEY=your-gemma-key

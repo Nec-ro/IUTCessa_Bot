@@ -1,29 +1,97 @@
-# Token and secrets
-core/Tokens.py
-# core/AI.py
-
-# Pycache folders
+# Byte-compiled / optimized / DLL files
 __pycache__/
-core/__pycache__/
-kmkyar/__pycache__/
-techstack/__pycache__/
-interface/__pycache__/
+*.py[cod]
+*$py.class
 
-# OS or editor files
-*.log
-*.swp
-.DS_Store
-.vscode/
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# environments
 .venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.env
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+*.swp
+*.log
+Thumbs.db
 
 # User data files
 *.pkl
 *.json
 *.xlsx
 
+# Project-specific ignores
+
+
 # Heartbeat file
 mysite
 mysite/heartbeat.txt
 
-# Temporary Files
-temp.py
+# Temporary / cache files (applies everywhere)
+*.tmp
+*.temp
+*~ 
+*.cache
