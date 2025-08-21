@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtualenvs
+.venv/
+venv/
+
+# VCS & editor junk
+.git/
+.gitignore
+*.swp
+*.swo
+.DS_Store
+
+# Local artifacts
+dist/
+build/
+
+# Secrets & env files (you’ll mount or pass them at runtime)
+.env
+.env.*

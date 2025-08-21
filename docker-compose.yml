@@ -1,0 +1,15 @@
+services:
+  iutcessa-bot:
+    build:
+      context: .
+      dockerfile: src/Dockerfile
+    image: iutcessa-bot:latest
+    restart: no
+
+    env_file:
+      - .env
+
+    command: python src/main.py
+
+    volumes:
+      - ./src:/app/src:rw

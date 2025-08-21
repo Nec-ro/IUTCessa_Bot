@@ -44,9 +44,50 @@ Key modules you may edit:
 
 ---
 
-## 🛠 How to begin (preferred)
+## 🛠 How to Run (with Docker — preferred)
+
+**Requirements**
+
+* Docker & Docker Compose (v2)
+
+**What’s included**
+
+* Image built from `src/Dockerfile`
+* Compose service `iutcessa-bot`
+* Non-root user inside the container
+* Code bind-mounted for easy iteration
+
+### 1) Clone the repo
+
+```bash
+git clone https://github.com/Nec-ro/IUTCessa_Bot.git
+cd IUTCessa_Bot
+```
+
+### 2) Create your env file (at the repo root)
+
+```bash
+cp .env.sample .env
+```
+
+Open `.env` and fill in required values (bot token, admin IDs, group IDs, AI keys, etc.).
+
+> If you see `No .env found` in logs, ensure the file is named exactly `.env` and is placed **at the repository root**, not inside `src/`.
+
+### 3) Build and start with Docker Compose
+
+```bash
+docker compose up --build
+```
+
+---
+
+## 🧪 Local (non-Docker) — alternative
+
+If you’d rather run it locally:
 
 1. **Clone the repo**
+
    ```bash
    git clone https://github.com/Nec-ro/IUTCessa_Bot.git
    cd IUTCessa_Bot
@@ -54,18 +95,19 @@ Key modules you may edit:
 
 2. **Create & activate a virtual environment**
 
-   * macOS/Linux:
+   *macOS/Linux*
 
-     ```bash
-     python3 -m venv .venv
-     source .venv/bin/activate
-     ```
-   * Windows (PowerShell):
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
 
-     ```powershell
-     python -m venv .venv
-     .\.venv\Scripts\Activate.ps1
-     ```
+   *Windows (PowerShell)*
+
+   ```powershell
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   ```
 
 3. **Install dependencies**
 
@@ -73,22 +115,20 @@ Key modules you may edit:
    pip install -r requirements.txt
    ```
 
-
 4. **Create your env file**
 
    ```bash
-   cat .env.sample > .env
+   cp .env.sample .env
    ```
 
-   Open `.env` and fill in the required tokens/IDs (bot token, admin IDs, group IDs, AI keys, etc.).
+   Fill in tokens/IDs.
 
 5. **Run the bot**
 
    ```bash
-   python src/main.py
+   cd src
+   python main.py
    ```
-
-> If your entry point differs, adjust the run command accordingly.
 
 ---
 

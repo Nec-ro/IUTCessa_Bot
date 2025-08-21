@@ -86,7 +86,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE, sta
                     if data["has_paid"] == True:
                         await update.message.reply_text("شما قبلا مبلغ شهریه را پرداخت کردید.")
                     elif data["has_paid"] == False:
-                        await update.message.reply_text(f"تبریک! شما در دوره {data["course"]} قبول شدید!")
+                        await update.message.reply_text(f"تبریک! شما در دوره {data['course']} قبول شدید!")
                         await set_user_display(update, context, state="tech-stack-pay")
         elif text == "🔔 به من یادآوری کن":
             await update.message.reply_text("با توجه به پایان یافتن جلسات معرفی دوره‌ها، این بخش در حال حاضر غیرفعال است.")
