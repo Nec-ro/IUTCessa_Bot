@@ -155,10 +155,13 @@ async def ask(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         full_text = update.message.text or ""
         command_prefix = f"/ask@{bot_username}"
+        command_prefixV2 = "/ask"
 
         requester_note = None
         if full_text.startswith(command_prefix):
             requester_note = full_text[len(command_prefix):].strip()
+        elif full_text.startswith(command_prefixV2):
+            requester_note = full_text[len(command_prefixV2):].strip()
 
         opinion = ai_opinion(text= original_text, requester_note= requester_note,
                              original_username= original_username, requester_username= requester_username, 
@@ -182,10 +185,13 @@ async def ask(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         full_text = update.message.text or ""
         command_prefix = f"/ask@{bot_username}"
+        command_prefixV2 = "/ask"
 
         original_text = None
         if full_text.startswith(command_prefix):
             original_text = full_text[len(command_prefix):].strip()
+        elif full_text.startswith(command_prefixV2):
+            original_text = full_text[len(command_prefixV2):].strip()
 
         if original_text in ["", None]:
             try:
