@@ -1,6 +1,6 @@
 from telegram.ext import ContextTypes
 from telegram import Update
-from .DBInteract import load_registered_users, save_registered_users
+from .db_interact import load_registered_users, save_registered_users
 
 COURSE_LISTS = ["Back-End", "Front-End", "DevOps", "AI", "Blockchain", "Game", "Graphic Design"]
 GROUP_IDS = {

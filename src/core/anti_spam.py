@@ -1,6 +1,6 @@
-from .AccessLevels import get_user_access
+from .access_levels import get_user_access
 from collections import defaultdict
-from .Tokens import SALATIN
+from .setting import SALATIN
 from telegram import Update
 import time
 user_message_log = defaultdict(list) # for spam checking

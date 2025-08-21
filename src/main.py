@@ -3,19 +3,19 @@ from telegram import ReplyKeyboardMarkup, Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 
 # Bot's Core Parts
-from core.StateLevels import (get_user_state, set_user_state, load_user_state, save_user_state)
-from core.AccessLevels import (load_user_access, save_user_access, get_user_access)
-from core.AntiSpam import is_spamming_globally
-from core.CommandFunctions import IDCheck, github_repo_send, tldr, qdc, ask
-from core.Tokens import TOKEN, SALATIN
+from core.state_levels import (get_user_state, set_user_state, load_user_state, save_user_state)
+from core.access_levels import (load_user_access, save_user_access, get_user_access)
+from core.anti_spam import is_spamming_globally
+from core.command_functions import IDCheck, github_repo_send, tldr, qdc, ask
+from core.setting import BOT_TOKEN, SALATIN
 
 # Interface Parts
-from interface.DisplayManager import set_user_display
-from interface.Dispatcher import dispatch
+from interface.display_manager import set_user_display
+from interface.dispatcher import dispatch
 
 # Tech-Stack Parts
 from techstack.main import handle_payment_receipt
-from techstack.DBInteract import (load_registered_users, export_users, import_users)
+from techstack.db_interact import (load_registered_users, export_users, import_users)
 
 # Others
 import threading
@@ -166,7 +166,7 @@ heartbeat_thread = threading.Thread(target=backup_users, daemon=True)
 heartbeat_thread.start()
 
 if __name__ == "__main__":
-    app = ApplicationBuilder().token(TOKEN).build()
+    app = ApplicationBuilder().token(BOT_TOKEN).build()
     # basic commands
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("stop", stop))

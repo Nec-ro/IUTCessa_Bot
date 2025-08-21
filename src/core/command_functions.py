@@ -1,8 +1,8 @@
 from telegram import Update
 from telegram.ext import ContextTypes
-from .AntiSpam import is_spamming_globally
-from .AI import ai_summarize, ai_opinion
-from .Tokens import SALATIN
+from .anti_spam import is_spamming_globally
+from .ai import ai_summarize, ai_opinion
+from .setting import SALATIN
 import time
 import re
 

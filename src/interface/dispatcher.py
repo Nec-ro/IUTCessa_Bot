@@ -1,7 +1,7 @@
-from core.StateLevels import KMKYAR_MENUS, TECH_STACK_USER_PANEL, TECH_STACK_ADMIN_PANEL
-from kmkyar import Menus as kmkyar_menus
-from techstack import UserMenus as techstack_user_menus
-from techstack import AdminMenus as techstack_admin_menus
+from core.state_levels import KMKYAR_MENUS, TECH_STACK_USER_PANEL, TECH_STACK_ADMIN_PANEL
+from kmkyar import menus as kmkyar_menus
+from techstack import user_menus as techstack_user_menus
+from techstack import admin_menus as techstack_admin_menus
 
 async def dispatch(update, context, state):
     if state in KMKYAR_MENUS:

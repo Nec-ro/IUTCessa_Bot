@@ -1,6 +1,6 @@
 from telegram import Update
 from telegram.ext import ContextTypes
-from interface.DisplayManager import set_user_display 
+from interface.display_manager import set_user_display 
 from .main import check_user_role, create_and_send_invite_link
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE, state: str):

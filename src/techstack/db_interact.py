@@ -2,7 +2,7 @@ from telegram import Update, InputFile
 from telegram.ext import ContextTypes
 import json
 import os
-from core.Tokens import SALATIN
+from core.setting import SALATIN
 
 base_dir = os.path.dirname(__file__)
 REGISTERED_USERS_FILE = (os.path.join(base_dir, "registered_users.json")) #tech-stack data

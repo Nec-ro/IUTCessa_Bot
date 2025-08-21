@@ -1,11 +1,11 @@
 from telegram import Update
 from telegram.ext import ContextTypes
-from interface.DisplayManager import set_user_display
-from .DBInteract import (load_registered_users, save_registered_users, load_tasklinks, save_tasklinks,
+from interface.display_manager import set_user_display
+from .db_interact import (load_registered_users, save_registered_users, load_tasklinks, save_tasklinks,
                         load_backup_course, save_backup_course)
-from .Validations import vaildate_info
+from .validations import vaildate_info
 from .main import show_user_priorities, show_user_reminders
-from .ManageGroups import create_and_send_invite_link
+from .manage_groups import create_and_send_invite_link
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE, state: str):
     text = update.message.text

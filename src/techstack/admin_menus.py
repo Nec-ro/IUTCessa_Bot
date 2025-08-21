@@ -1,13 +1,13 @@
 from telegram import Update
 from telegram.ext import ContextTypes
-from interface.DisplayManager import set_user_display
-from .DBInteract import load_registered_users, save_registered_users
-from .Validations import is_valid_positive_integer
-from core.AccessLevels import (save_user_access, user_access_keys,
+from interface.display_manager import set_user_display
+from .db_interact import load_registered_users, save_registered_users
+from .validations import is_valid_positive_integer
+from core.access_levels import (save_user_access, user_access_keys,
                                 get_user_access, set_user_access)
 from .main import (parse_edit_input, filter_input, message_input, start_filter, user_matches,
                             render_user_summary, USERS_PER_MSG)
-from core.Tokens import SALATIN
+from core.setting import SALATIN
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE, state: str):
     text = update.message.text

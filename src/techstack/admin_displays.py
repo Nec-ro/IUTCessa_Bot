@@ -1,4 +1,4 @@
-from core.AccessLevels import load_user_access
+from core.access_levels import load_user_access
 
 def get_state_keyboard(state: str):
     if state == "backdoor-panel-head":

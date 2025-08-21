@@ -1,5 +1,5 @@
 from openai import OpenAI
-from .Tokens import GEMMA_API_KEY
+from .setting import GEMMA_API_KEY
 
 client = OpenAI(
     api_key=GEMMA_API_KEY,

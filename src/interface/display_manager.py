@@ -2,10 +2,10 @@ from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import ContextTypes
 from typing import Optional
 
-from techstack.UserDisplays import get_state_keyboard as techstack_user_keyboard, get_state_text as techstack_user_text
-from techstack.AdminDisplays import get_state_keyboard as techstack_admin_keyboard, get_state_text as techstack_admin_text
-from kmkyar.Displays import get_state_keyboard as kmkyar_keyboard, get_state_text as kmkyar_text
-from core.StateLevels import *
+from techstack.user_displays import get_state_keyboard as techstack_user_keyboard, get_state_text as techstack_user_text
+from techstack.admin_displays import get_state_keyboard as techstack_admin_keyboard, get_state_text as techstack_admin_text
+from kmkyar.displays import get_state_keyboard as kmkyar_keyboard, get_state_text as kmkyar_text
+from core.state_levels import *
 
 def get_state_keyboard(state: str):
     if state in TECH_STACK_USER_PANEL:
