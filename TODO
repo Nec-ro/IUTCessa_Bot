@@ -1,0 +1,6 @@
+Fix/Restructure:
+- DB migrations
+- Async DB
+- Sync DB and app model
+
+Feature:
