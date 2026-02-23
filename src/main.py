@@ -6,7 +6,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, Con
 from core.state_levels import (get_user_state, set_user_state, load_user_state, save_user_state)
 from core.access_levels import (load_user_access, save_user_access, get_user_access)
 from core.anti_spam import is_spamming_globally
-from core.command_functions import IDCheck, github_repo_send, tldr, qdc, ask
+from core.command_functions import IDCheck, github_repo_send, tldr, qdc, ask, random_face_emoji
 from core.setting import BOT_TOKEN, SALATIN
 
 # Interface Parts
@@ -176,6 +176,7 @@ if __name__ == "__main__":
 
     # basic response
     app.add_handler(CommandHandler("qdc", qdc))
+    app.add_handler(CommandHandler("face", random_face_emoji))
 
     # techstack database related commands
     app.add_handler(CommandHandler('db', export_users))
